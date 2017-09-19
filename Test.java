@@ -1,33 +1,14 @@
-import java.util.Scanner;
+package com.cg.main;
+
 public class Test {
-
-   public static void main(String args[]) {
-	   Scanner sc=new Scanner(System.in);
-		System.out.println("Enter first string");
-	   String s = sc.nextLine();
-	   
-      s = s.concat(s);
-      System.out.println(s);
-    
-      for (int i=0; i < s.length(); i++){
-          if (i % 2 != 0){
-         s = s.substring(0,i-1) + "#" + s.substring(i, s.length());
-          }
-       }
-      		System.out.println(s);
-      		
-      	
-      
-      		  
-      	      		
-      		}
-      		
-      		
-   }
-
-
-
-
-
-
-   
+    public static void main(String[] args) {
+        StringBuilder a = new StringBuilder("A");
+        StringBuilder b = new StringBuilder("B");
+        change(a, b);
+        System.out.println(a + "," + b);
+    }
+    static void change(StringBuilder x, StringBuilder y) {
+        y.append(x);
+        y = x;
+    }
+ }
